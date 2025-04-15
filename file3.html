@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const year = prompt("напиши рік твого народження")
+        const city = prompt("напиши місто в якому ти живеш")
+        const sport = prompt("твій улюбленний вид спорту")
+
+        const age = new Date().getFullYear() - Number(year) 
+
+        let capitalSave;
+       
+        if(city === null){
+            alert("шкода, що не захотіли ввести своє місто")
+        }else if(sport === null){
+            alert("шкода, що не захотіли ввести свій улюбленний вид спорту")
+        }else if(year === null){
+            alert("шкода, що не захотіли ввести свій рік народження")
+        }
+
+        if(city !== null){
+            let cityProm = city.trim().toLowerCase()
+            switch(cityProm) {
+            case "лондон":
+            capitalSave = "Англії"
+            alert(`Ти живеш у столиці ${capitalSave}`)
+            break;
+            case "київ":
+            capitalSave = "України"
+            alert(`Ти живеш у столиці ${capitalSave}`)
+            break;
+            case "вашингтон":
+            capitalSave = "США"
+            alert(`Ти живеш у столиці ${capitalSave}`)
+            break;
+            default :
+            alert(`Ти живеш у місті ${city}`)
+        }
+        }
+          
+        if(year !== null){
+            alert(`твій вік: ${age}`)
+        }
+
+        if(sport !== null){
+            let sportProm = sport.trim().toLowerCase()
+            switch(sportProm){
+            case "футбол":
+            alert("Круто!Хочеш стати Хаві Ернандес?")
+            break;
+            case "регбі":
+            alert("Круто!Хочеш стати Морріс Керксі?")
+            break;
+            case "плавання":
+            alert("Круто!Хочеш стати Метью Абуд?")
+            break;
+            default: 
+            alert(`Круто!Щасти з ${sport}`)
+        }
+        }
+
+
+
+    </script>
+</body>
+</html>
