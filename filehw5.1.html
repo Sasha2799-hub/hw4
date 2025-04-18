@@ -7,9 +7,14 @@
 </head>
 <body>
     <script>
+        let str = ''
         for(let i = 20; i <= 30; i += 0.5){
-            console.log(i);
+            str += i
+            if(i < 30) {
+                str += `, `
+            }
         }
+        console.log(str);
     </script>
 </body>
 </html>
