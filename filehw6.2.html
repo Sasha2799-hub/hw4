@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [32, "peach", 18, true, "apple", 121, false, 60, null, "orange", undefined, 90]
+
+
+        function getMeanNum(array){
+            const numArray = []
+            let mean = 0;
+            let sum = 0;
+            for(let i = 0; i < array.length; i++){
+
+                if(typeof array[i] === "number"){
+                    numArray.push(array[i])
+                }
+                
+            }
+            for(let j = 0; j < numArray.length; j++){     
+                              
+                sum += numArray[j] 
+                mean = sum / numArray.length
+
+                }
+            console.log(mean);
+            
+            
+        }
+
+        getMeanNum(array)
+
+
+        
+
+    </script>
+</body>
+</html>
