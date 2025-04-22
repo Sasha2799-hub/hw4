@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arrNum = [1, 2, 3, 4 ,5, 7]
+        function deleteNum (arrNum, number){
+            for(let i in arrNum){
+                if(arrNum[i] === number){
+                    // delete arrNum[i]
+                    arrNum.splice(i, 1)
+                }
+                
+            }
+            console.log(arrNum);
+            
+        }
+
+        deleteNum(arrNum, 5)
+    </script>
+</body>
+</html>
