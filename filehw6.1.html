@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const str = prompt("enter a word, a sentence, a phrase")
+        const array = []
+        const newAr = str.split('')
+        
+        function getLetters(newAr){
+
+            while(true){
+            const promptLetter = prompt("enter some letters to delete")
+            array.push(promptLetter)
+
+            if(promptLetter === null){
+                break
+            }
+        }
+        for(let j = 0; j < newAr.length; j++){
+                for(let b = 0; b < array.length; b++){
+                    if(newAr[j] === array[b]){
+                        delete newAr[j]
+                    }
+                }
+            }
+        }
+
+        getLetters(newAr)
+
+        console.log(newAr.join(''));
+
+    </script>
+</body>
+</html>
