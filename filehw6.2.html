@@ -18,15 +18,10 @@
 
                 if(typeof array[i] === "number"){
                     numArray.push(array[i])
+                    sum += array[i] 
                 }
-                
-            }
-            for(let j = 0; j < numArray.length; j++){     
-                              
-                sum += numArray[j] 
                 mean = sum / numArray.length
-
-                }
+            }
             console.log(mean);
             
             
