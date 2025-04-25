@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+            const promptNum = Number(prompt('please enter a number  not less than 100'))
+            if(promptNum > 100){
+                console.log(promptNum);
+                return 
+
+                }else if(promptNum < 100){
+                    for(let i = 0; i < 10; i++){
+                        const askAgain = Number(prompt('please enter again'))
+                        
+                    if(askAgain >= 100){
+                    
+                        console.log(askAgain);
+                        return 
+                    }
+                    }
+
+                }
+                console.log("you don't have attempts anymore");
+                
+                return 
+            }
+        add()
+        // console.log(add());
+        
+    </script>
+</body>
+</html>
