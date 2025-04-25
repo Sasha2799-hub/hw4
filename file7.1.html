@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+function func () {    
+    let sum = 0
+  return function(num) {
+    sum += num
+    return sum
+  }
+}
+
+ const save = func();
+ 
+ console.log(save(4))
+ console.log(save(6))
+ console.log(save(10))
+ console.log(save(20))
+
+
+</script> 
+</body>
+</html>
