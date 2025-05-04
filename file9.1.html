@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const company = {
+            sales : [{name: "Sasha", salary: 1000}, {name: "Masha", salary: 1500}],
+            marketing : [{name: "Demon", salary: 2000}, {name: "Stefan", salary: 2500}],
+            tech : {
+                app: {
+                    frontend : [{name: "Elena", salary: 4000}, {name: "Jack", salary: 4000}],
+                    design:  [{name: "Lary", salary: 3500}, {name: "Lily", salary: 4500}],
+                    backend: [{name: "Mary", salary: 4500}, {name: "Lora", salary: 5500}]
+                },
+                web: {
+                    frontend : [{name: "Stela", salary: 4000}, {name: "Josh", salary: 4000}],
+                    design:  [{name: "Klaus", salary: 3500}, {name: "Vlad", salary: 4500}],
+                    backend: [{name: "Marianna", salary: 4500}, {name: "Lorelai", salary: 5500}]
+                }
+
+            }
+        } 
+
+        function getSum(obj){
+            let salariesSum = 0
+
+            for(let i in obj){
+                if(Array.isArray(obj[i])){
+
+                    obj[i].forEach((worker) => salariesSum += worker.salary)
+
+                }else if (typeof obj[i] === 'object'){
+    
+                    salariesSum += getSum(obj[i])
+                    
+                    }
+                }
+                
+                return salariesSum
+                
+            }
+
+        
+    
+      console.log(getSum(company));
+
+        
+            </script>
+</body>
+</html>
