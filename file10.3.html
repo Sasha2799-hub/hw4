@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const newContact = {name: "Nika", num: "11212", email: "fox@gmail.com"}
+        const contactBook = {
+  contacts: [
+    { name: "Alex", num: "12345", email: "cat@gmail.com" },
+    { name: "Billy", num: "34567", email: "dog@gmail.com" },
+    { name: "Olha", num: "56789", email: "bird@gmail.com" }
+  ],
+    findName(name) {
+        return this.contacts.find((user) => user.name === name)
+        
+    },
+    addNewContact(newContact) {
+        this.contacts.push(newContact)
+    }
+}
+    const contactByName = contactBook.findName("Olha")
+    console.log(contactByName)
+    contactBook.addNewContact(newContact)
+    console.log(contactBook.contacts);
+    
+
+    </script>
+</body>
+</html>
