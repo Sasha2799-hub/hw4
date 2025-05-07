@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items:  center;
+            flex-direction: column;
+        }
+        #btn {
+            align-self: center; 
+            padding: 20px 40px;
+            margin: 20px 50px;  
+            border-radius: 15px;
+            border: 2px solid rgb(206, 141, 18);
+            background-color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 16px; 
+        }
+
+        tr,
+        td {
+          border: 2px solid black;
+          text-align: center;
+          height: 40px;
+          width: 40px;
+          background-color: rgb(241, 241, 212);
+        }
+  
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        .up, .aside {
+            background-color: rgb(227, 187, 133);
+            font-weight: bold;
+            color: #000;            
+
+        }
+        caption{
+            margin-bottom: 20px;
+            color: #000;            
+            font-weight: bold;
+            font-size: 26px; 
+        }
+      </style>
+    
+  </head>
+  <body>
+    <div class="container">
+        <button id="btn">Show table</button>
+    </div>
+    
+   
+    <script>
+      const button = document.getElementById("btn");
+      const container = document.querySelector(".container");
+
+      button.addEventListener("click", function () {
+        const tableElem = document.createElement("table");
+        container.appendChild(tableElem);
+
+        const captionELem = document.createElement("caption");
+        captionELem.textContent = "Таблиця Піфагора";
+        tableElem.appendChild(captionELem);
+
+        const firstTr = document.createElement("tr");
+        tableElem.appendChild(firstTr);
+
+        const emptyTd = document.createElement("td");
+        firstTr.appendChild(emptyTd);
+
+        for (let k = 1; k <= 10; k++) {
+          const tdElem2 = document.createElement("td");
+          firstTr.appendChild(tdElem2);
+          tdElem2.classList.add('up')
+          tdElem2.textContent = k;
+        }
+
+        for (let i = 1; i <= 10; i++) {
+          const trElem = document.createElement("tr");
+          tableElem.appendChild(trElem);
+
+          const tdAside = document.createElement("td");
+          tdAside.textContent = i;
+          tdAside.classList.add('aside')
+          trElem.appendChild(tdAside);
+
+          for (let j = 1; j <= 10; j++) {
+            const tdElem3 = document.createElement("td");
+            tdElem3.textContent = i * j;
+            trElem.appendChild(tdElem3);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
