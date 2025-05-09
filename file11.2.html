@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, mollitia! Sunt excepturi sit quas! Eligendi at deleniti sint voluptatum enim nulla, blanditiis dolorum, fugiat, soluta placeat odit aliquam maiores culpa.</p>
+    <button class="btn">change color</button>
+    <script>
+        const button = document.querySelector('.btn')
+        const text = document.querySelector('.text')
+
+        button.addEventListener('click', function (){
+            text.classList.toggle('green')
+        })
+
+    </script>
+</body>
+</html>
